@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class                = "jumbotron text-center">
+    <h1>Suivi de l'étude</h1>
+</div>
+<div class                = "container">
+    <div class            = "wrapper">
+    <div class            = "arrow-steps clearfix">
+            <div class    = "step current"> <span> Informations Générales</span> </div>
+            <div class    = "step"> <span>Choix du pélèvement</span> </div>
+            <div class    = "step"> <span>Groupes+temps</span> </div>
+            <div class    = "step"> <span>Caractéristiques du prélèvement</span> </div>
+            <div class    = "step"> <span>Récapitualif</span> </div>
+    </div>
+            <div class    = "nav clearfix mt-4">
+            <button class="btn btn-primary mr-1">{{ button|default('Previous') }}</button>
+            <button class="btn btn-primary ">{{ button|default('Next') }}</button>
+            
+            </div>
+    </div>
+</div>
+{% endblock %}
+
+ 

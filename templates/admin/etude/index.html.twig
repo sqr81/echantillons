@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<div class="container mt-4">
+
+    <div class="jumbotron text-center">
+        <h1>Listes des échantillon</h1>
+    </div>
+    {% for message in app.flashes('success') %}
+        <div class="alert alert-success">
+            {{ message }}
+        </div>
+    {% endfor %}
+    <table class="table table-stripped">
+        <thead>
+            <tr>
+                <th>Numero</th>
+                <th>Sponsor</th>
+                <th>Test</th>
+                <th>DE</th>
+                <th>TRE</th>
+                <th>Espece</th>
+                <th>Statut</th>
+                <th>Commentaires</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for etude in etudes %}
+            <tr>
+                <td>{{ etude.numero | number_format(0, '', ' ')}}</td>
+                <td>{{ etude.sponsor }}</td>
+                <td>{{ etude.test }}</td>
+                <td>{{ etude.de }}</td>
+                <td>{{ etude.tre }}</td>
+                <td>{{ etude.espece }}</td>
+                <td>{{ etude.statut }}</td>
+                <td>{{ etude.commentaire }}</td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="{{ path('admin.etude.edit', {id: etude.id}) }}" class="btn btn-secondary">Editer</a>
+                    <form method="post" action="{{ path('admin.etude.delete', {id: etude.id}) }}" style="display:inline-block" onsubmit="return confirm('Êtes vous sûr?')">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ etude.id) }}">
+                        <button class="btn btn-danger">Supprimer</button>
+                    </form>
+                </td>              
+            </tr>
+        {% endfor %}
+        </tbody
+    </table>
+    <div class="text-right">
+        <a href="{{ path('admin.etude.new') }}" class="btn btn-primary">Créer une nouvelle étude</a>
+        <a href="{{ path('formulaire') }}" class="btn btn-primary">Tableau de bord</a>
+    </div>
+</div>
+
+{% endblock %}
