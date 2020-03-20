@@ -4,7 +4,7 @@ namespace App\Controller;
 use Symfony\Component\HttpFoundation\Response;
 use Twig\Environment;
 
-class HomeController  
+class HomeController
 {
 
     /**
@@ -14,10 +14,10 @@ class HomeController
     {
         $this->twig = $twig;
     }
-    
+
     public function index(): Response
     {
-        return new Response($this->twig->render('pages/home.html.twig'));
+        return new Response($this->twig->render('pages/formulaire.html.twig'));
     }
 }
-?>
+

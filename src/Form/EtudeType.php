@@ -19,9 +19,11 @@ class EtudeType extends AbstractType
             ->add('DE', null, [
                 'label' => 'DE'
             ])
+            ->add('representantSponsor')
             ->add('tre', null, [
                 'label' => 'TRE'
             ])
+            ->add('commercial')
             ->add('espece', ChoiceType::class, [
                 'choices' => $this->getChoices()
             ])             

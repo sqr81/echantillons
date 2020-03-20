@@ -5,9 +5,9 @@
 logout:
     path: /logout
 
-home:
+login:
     path: /
-    controller: App\Controller\HomeController::index
+    controller: App\Controller\SecurityController::login
 
 formulaire:
     path: /pages/formulaire
@@ -16,5 +16,6 @@ formulaire:
 ajout:
     path: /pages/ajoutFormulaire
     controller: App\Controller\EtudeController::addEtude
+
 
     

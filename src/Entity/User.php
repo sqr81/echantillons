@@ -90,7 +90,7 @@ class User implements UserInterface,\Serializable
     {
         return serialize([
             $this->id,
-            $this->paraphe,
+            $this->username,
             $this->password
         ]);
     }
@@ -99,7 +99,7 @@ class User implements UserInterface,\Serializable
     {
         list (
             $this->id,
-            $this->paraphe,
+            $this->username,
             $this->password
             ) = unserialize($serialized, ['allowed_classes' => false]);
     }
