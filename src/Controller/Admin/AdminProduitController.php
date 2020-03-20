@@ -1,34 +1,45 @@
 <?php
 namespace App\Controller\Admin;
 
+use App\Entity\Produit;
+use App\Form\ProduitType;
+use App\Repository\ProduitRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Twig\Environment;
 
 class AdminProduitController extends AbstractController
 {
-
     /**
-     * @var Environment
+     * @var ProduitRepository
      */
-    private $twig;
+    private $repository;
 
-    public function __construct(Environment $twig)
-    {
-        $this->twig = $twig;
-    }
-
-    /**
-     * @Route("/pages/produit", name="produit.index")
-     * @return Response
-     * @throws \Twig\Error\LoaderError
-     * @throws \Twig\Error\RuntimeError
-     * @throws \Twig\Error\SyntaxError
-     */
-    public function index(): Response
-    {
-        return new Response($this->twig->render('pages/produit.html.twig'));
-    }
-
+    public function __construct(ProduitRepository $repository)
+{
+    $this->repository = $repository;
 }
+
+    /**
+     * @Route("/admin/produit", name="admin.produit.index")
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function index(Produit $produit)
+    {
+        $produits = $this->repository->findAll();
+        $form = $this->createForm(ProduitType::class, $produit);
+        return $this->render('admin/produit/index.html.twig', [
+            'produit' => $produit,
+            'form' => $form->createView()
+        ]);
+    }
+
+    /**
+     * @Route("/admin/{id}", name="admin.produit.edit")
+     */
+    public function edit(Produit $produit)
+    {
+    return $this->render('admin/produit/edit.html.twig', compact('produit'));
+    }
+}
+
+

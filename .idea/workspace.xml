@@ -2,23 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eaef6989-5ffb-4867-8357-1d0636a39537" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Admin/AdminProduitController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/pages/produit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/echantillons-master.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/echantillons-master.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/ProduitType.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/translation.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/translation.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/UserFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/UserFixtures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/EtudeType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/EtudeType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/arrow.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/arrow.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/formulaire.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/formulaire.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/AdminEtudeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/AdminEtudeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/AdminProduitController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/AdminProduitController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages/produit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/produit/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,13 +165,16 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1ZFjhkvNhUuAYlFF6okmVzPQCTa" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -191,6 +182,11 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="inlay.hints.PHP" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\wamp64\www\echantillons\templates\admin\produit" />
+    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -206,14 +202,21 @@
       <workItem from="1584448719044" duration="3274000" />
       <workItem from="1584459497350" duration="11419000" />
       <workItem from="1584520776957" duration="3361000" />
-      <workItem from="1584547616776" duration="50040000" />
+      <workItem from="1584547616776" duration="65234000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="2684" y="204" key="#com.intellij.ide.util.MemberChooser" timestamp="1584713313806">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2684" y="204" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1584713313806" />
     <state x="2701" y="337" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1584630753080">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>

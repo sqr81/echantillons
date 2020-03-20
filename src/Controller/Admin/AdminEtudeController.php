@@ -30,7 +30,7 @@ class AdminEtudeController extends AbstractController
     }
 
     /**
-     * @Route("/admin", name="admin.etude.index")
+     * @Route("/admin/etude", name="admin.etude.index")
      * @return \Symfony\Component\HttpFoundation\Response
      */
     public function index()

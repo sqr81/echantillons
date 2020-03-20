@@ -17,18 +17,18 @@
         </tr>
         </thead>
         <tbody>
-        {#{% for etude in etudes %}
+        {{ form_start(form) }}
+        {{  form_widget(form) }}
+        {% for produit in produits %}
             <tr>
                 <th scope="row"><input type="checkbox" aria-label="Checkbox for following text input"></th>
-                <td>{{ etude.numero | number_format(0, '', ' ')}} / {{ etude.sponsor }}</td>
-                <td>{{ etude.test }}</td>
-                <td>{{ etude.de }}</td>
-                <td>{{ etude.tre }}</td>
-                <td>{{ etude.espece }}</td>
-                <td>{{ etude.statut }}</td>
-                <td>{{ etude.commentaire }}</td>
+                <td>{{ produit.groupe }}</td>
+                <td></td>
+                <td>{{ produit.nbrAnimaux }}</td>
+                <td>{{ produit.voieAdmin }}</td>
+                <td>{{ produit.datePremierPrelevement }}</td>
             </tr>
-        {% endfor %}#}
+        {% endfor %}
         <tr>
 
             <td><input type="text" class="form-control" id="formGroupExampleInput" placeholder="Groupes"></td>
@@ -48,7 +48,8 @@
     <div class="container d-flex mt-5">
         <button class="btn btn-light mr-1">Tout</button>
         <button class="btn btn-light mr-1">Aucun</button>
-        <button class="btn btn-secondary mr-1">Suivant</button>
-        <button class="btn btn-secondary">Nouveau groupe</button>
+        <a href="#" class="btn btn-primary">Suivant</a>
+        <a href="#" class="btn btn-primary">Nouveau groupe</a>
     </div>
+    {{ form_end(form) }}
 {% endblock %}
