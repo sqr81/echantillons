@@ -18,7 +18,13 @@ class ProduitRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, Produit::class);
     }
-
+    public function findLatest(): array
+    {
+        return $this->createQueryBuilder('p')
+            ->setMaxResults(100)
+            ->getQuery()
+            ->getResult();
+    }
     // /**
     //  * @return Produit[] Returns an array of Produit objects
     //  */
@@ -47,4 +53,5 @@ class ProduitRepository extends ServiceEntityRepository
         ;
     }
     */
+
 }

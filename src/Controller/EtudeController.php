@@ -53,15 +53,15 @@ class EtudeController extends AbstractController
         $em->flush();*/
 
         $etude = $this->repository->findAll();
-        dump($etude);
-        /*$this->em->flush();*/
         return $this->render('admin/etude/index.html.twig', [
             'current_menu' => 'etudes'
         ]);
 
     }
+
     /**
      * @param EtudeRepository $repository
+     * @return Response
      */
      public function viewEtude(EtudeRepository $repository): Response
      {
